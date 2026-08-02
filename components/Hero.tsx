@@ -5,15 +5,15 @@ export default function Hero() {
     <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:py-24">
       <div>
         <p className="text-sm font-medium uppercase tracking-wide text-brand-500">
-          Psicologia clínica • {siteConfig.crp}
+          {siteConfig.title} • {siteConfig.crp}
         </p>
         <h1 className="mt-4 font-serif text-4xl leading-tight text-brand-900 md:text-5xl">
-          Um espaço de escuta para você se reencontrar
+          Construindo uma vida mais leve e com sentido
         </h1>
         <p className="mt-6 text-lg text-brand-700">
-          Atendimento psicológico individual e para casais, presencial e
-          online, para quem busca lidar com ansiedade, autoestima,
-          relacionamentos e momentos de transição na vida.
+          Atendimento psicológico com foco em desenvolvimento emocional,
+          baseado na Terapia Cognitivo-Comportamental (TCC). Atendimento em{" "}
+          {siteConfig.location}, {siteConfig.attendance.toLowerCase()}.
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
           <a

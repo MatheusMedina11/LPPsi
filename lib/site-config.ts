@@ -1,7 +1,10 @@
 export const siteConfig = {
-  name: "Dra. Marina Alves",
-  crp: "CRP 06/123456",
-  whatsappNumber: "5511999999999",
+  name: "Milena Goldani",
+  title: "Psicóloga | TCC",
+  crp: "CRP 07/42552",
+  location: "Porto Alegre",
+  attendance: "Online e presencial",
+  whatsappNumber: "5551981596780",
   whatsappMessage: "Olá! Gostaria de agendar uma consulta.",
 };
 

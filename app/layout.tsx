@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Dra. Marina Alves | Psicóloga Clínica",
-  description:
-    "Atendimento psicológico individual e para casais, presencial e online. Agende sua primeira sessão com a Dra. Marina Alves.",
+  title: `${siteConfig.name} | ${siteConfig.title}`,
+  description: `Atendimento psicológico com foco em desenvolvimento emocional, ${siteConfig.attendance.toLowerCase()} em ${siteConfig.location}. Agende sua sessão com ${siteConfig.name}.`,
 };
 
 export default function RootLayout({

@@ -1,13 +1,15 @@
+import { siteConfig } from "@/lib/site-config";
+
 const services = [
   {
-    title: "Terapia individual",
+    title: "Terapia individual (TCC)",
     description:
-      "Acompanhamento para ansiedade, autoestima, luto, autoconhecimento e momentos de transição.",
+      "Acompanhamento com base na Terapia Cognitivo-Comportamental para ansiedade, autoestima e autoconhecimento.",
   },
   {
-    title: "Terapia de casal",
+    title: "Desenvolvimento emocional",
     description:
-      "Espaço para melhorar a comunicação, resolver conflitos e fortalecer o vínculo entre o casal.",
+      "Espaço para entender e regular emoções, construindo uma relação mais leve consigo mesmo.",
   },
   {
     title: "Atendimento online",
@@ -15,9 +17,8 @@ const services = [
       "Sessões por videochamada com a mesma qualidade do presencial, de onde você estiver.",
   },
   {
-    title: "Orientação a pais",
-    description:
-      "Suporte para lidar com desafios da educação e do desenvolvimento emocional dos filhos.",
+    title: "Atendimento presencial",
+    description: `Sessões presenciais em ${siteConfig.location}, em consultório acolhedor.`,
   },
 ];
 

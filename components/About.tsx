@@ -1,10 +1,10 @@
 import { siteConfig } from "@/lib/site-config";
 
 const credentials = [
-  "Graduação em Psicologia",
-  "Especialização em Terapia Cognitivo-Comportamental",
-  "+8 anos de experiência clínica",
-  "Atendimento presencial e online",
+  "Psicóloga clínica",
+  "Abordagem Terapia Cognitivo-Comportamental (TCC)",
+  "Foco em desenvolvimento emocional",
+  `Atendimento em ${siteConfig.location} — online e presencial`,
 ];
 
 export default function About() {
@@ -16,11 +16,10 @@ export default function About() {
         <div>
           <h2 className="font-serif text-3xl text-brand-900">Sobre {siteConfig.name}</h2>
           <p className="mt-6 text-brand-700">
-            Sou psicóloga clínica e acredito que a terapia é um processo de
-            construção conjunta, feito de escuta atenta e acolhimento sem
-            julgamentos. Meu trabalho é ajudar você a entender seus
-            sentimentos, romper padrões que já não fazem sentido e encontrar
-            caminhos mais leves para viver.
+            Trabalho com a Terapia Cognitivo-Comportamental (TCC) para apoiar
+            o seu desenvolvimento emocional, ajudando você a entender seus
+            pensamentos e sentimentos, romper padrões que já não fazem
+            sentido e construir uma vida mais leve e com sentido.
           </p>
           <ul className="mt-6 space-y-2 text-brand-700">
             {credentials.map((item) => (

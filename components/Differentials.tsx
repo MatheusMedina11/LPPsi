@@ -1,11 +1,13 @@
+import { siteConfig } from "@/lib/site-config";
+
 const differentials = [
   {
     title: "Acolhimento sem julgamentos",
     description: "Um ambiente seguro para você se expressar livremente.",
   },
   {
-    title: "Abordagem baseada em evidências",
-    description: "Métodos reconhecidos cientificamente para resultados reais.",
+    title: "TCC baseada em evidências",
+    description: "Terapia Cognitivo-Comportamental, método reconhecido cientificamente.",
   },
   {
     title: "Flexibilidade de horários",
@@ -23,7 +25,7 @@ export default function Differentials() {
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="font-serif text-3xl text-brand-900">Diferenciais</h2>
         <p className="mt-3 max-w-2xl text-brand-700">
-          O que torna o acompanhamento com {"a Dra. Marina"} diferente.
+          O que torna o acompanhamento com {siteConfig.name} diferente.
         </p>
 
         <div className="mt-10 grid gap-8 sm:grid-cols-2">
