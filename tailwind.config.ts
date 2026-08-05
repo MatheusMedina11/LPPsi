@@ -8,27 +8,39 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Rosé dessaturado — suave, clean, sem agressividade visual.
         brand: {
-          50: "#fdf2f6",
-          100: "#fce7ef",
-          200: "#f9d0e1",
-          300: "#f3aecb",
-          400: "#ea82ac",
-          500: "#dd5c8f",
-          600: "#c13d71",
-          700: "#9e2f5c",
-          800: "#7a2549",
-          900: "#4a1730",
+          50: "#fdfaf9",
+          100: "#f9f0ed",
+          200: "#f0ded8",
+          300: "#e2c4bb",
+          400: "#cda396",
+          500: "#b58676",
+          600: "#9a6c5c",
+          700: "#7d574a",
+          800: "#5e423a",
+          900: "#3f2e29",
         },
+        // Neutros quentes para o fundo e textos secundários.
         sand: {
-          50: "#fffbfd",
-          100: "#fdf5f8",
-          200: "#fbebf1",
+          50: "#fdfcfb",
+          100: "#f7f4f2",
+          200: "#ece7e4",
+          300: "#d8d1cd",
         },
       },
       fontFamily: {
         sans: ["var(--font-sans)"],
         serif: ["var(--font-serif)"],
+      },
+      keyframes: {
+        "fade-up": {
+          from: { opacity: "0", transform: "translateY(16px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        "fade-up": "fade-up 0.6s ease-out both",
       },
     },
   },

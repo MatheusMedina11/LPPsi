@@ -9,4 +9,12 @@
 
 html {
   scroll-behavior: smooth;
+  /* Compensa o header fixo ao navegar pelas âncoras. */
+  scroll-padding-top: 5.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

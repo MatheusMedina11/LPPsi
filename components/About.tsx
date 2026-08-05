@@ -1,35 +1,59 @@
 import { siteConfig } from "@/lib/site-config";
+import Reveal from "./Reveal";
 
 const credentials = [
-  "Psicóloga clínica",
-  "Abordagem Terapia Cognitivo-Comportamental (TCC)",
-  "Foco em desenvolvimento emocional",
-  `Atendimento em ${siteConfig.location} — online e presencial`,
+  { label: "Registro profissional", value: siteConfig.crp },
+  { label: "Abordagem", value: "Terapia Cognitivo-Comportamental" },
+  { label: "Atendimento", value: `${siteConfig.location} · online e presencial` },
+  { label: "Foco", value: "Desenvolvimento emocional" },
 ];
 
 export default function About() {
   return (
-    <section id="sobre" className="bg-white py-16 md:py-24">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2">
-        <div className="mx-auto aspect-square w-full max-w-sm rounded-3xl bg-brand-100 md:order-1" />
+    <section id="sobre" className="py-24 md:py-32">
+      <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 md:grid-cols-2 md:gap-16">
+        <Reveal className="md:order-1">
+          <div className="mx-auto aspect-square w-full max-w-sm rounded-[2rem] bg-gradient-to-br from-brand-100 to-brand-200" />
+        </Reveal>
 
-        <div>
-          <h2 className="font-serif text-3xl text-brand-900">Sobre {siteConfig.name}</h2>
-          <p className="mt-6 text-brand-700">
-            Trabalho com a Terapia Cognitivo-Comportamental (TCC) para apoiar
-            o seu desenvolvimento emocional, ajudando você a entender seus
-            pensamentos e sentimentos, romper padrões que já não fazem
-            sentido e construir uma vida mais leve e com sentido.
+        <Reveal delay={80}>
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-brand-500">
+            Quem vai te atender
           </p>
-          <ul className="mt-6 space-y-2 text-brand-700">
+          <h2 className="mt-4 font-serif text-3xl leading-snug text-brand-900 md:text-4xl">
+            Prazer, sou {siteConfig.name}
+          </h2>
+
+          <div className="mt-6 space-y-4 leading-relaxed text-brand-700">
+            <p>
+              Sou psicóloga clínica e trabalho com Terapia
+              Cognitivo-Comportamental, uma abordagem prática e estruturada,
+              com eficácia comprovada por décadas de pesquisa.
+            </p>
+            <p>
+              Meu trabalho não é te dizer o que fazer. É te ajudar a enxergar
+              com clareza os padrões de pensamento que sustentam o que você
+              sente, para que você possa escolher caminhos diferentes — com
+              mais consciência e menos peso.
+            </p>
+            <p>
+              Acredito que terapia não é só para momentos de crise. É também
+              um espaço para se conhecer, se cuidar e construir uma vida mais
+              leve e com sentido.
+            </p>
+          </div>
+
+          <dl className="mt-8 grid gap-5 border-t border-sand-200 pt-8 sm:grid-cols-2">
             {credentials.map((item) => (
-              <li key={item} className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-brand-500" />
-                {item}
-              </li>
+              <div key={item.label}>
+                <dt className="text-xs uppercase tracking-wider text-brand-400">
+                  {item.label}
+                </dt>
+                <dd className="mt-1 text-sm text-brand-800">{item.value}</dd>
+              </div>
             ))}
-          </ul>
-        </div>
+          </dl>
+        </Reveal>
       </div>
     </section>
   );
